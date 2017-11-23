@@ -1,0 +1,384 @@
+.marketing
+  height: 1000px
+  width: 100%
+  position: relative
+.container--marketing
+  position: relative
+
+.marketing-rhombus
+	width: 800px
+	height: 800px
+	transform: rotate(45deg)
+	position: absolute
+	display: flex
+	align-items: center
+	justify-content: center
+	left: calc(50% - 350px)
+	transition: all .2s ease-in-out
+	box-shadow: 0px 0px 170px 0px rgba(0,0,0,0.35)
+	background-color: #fff
+	z-index: 4
+	&--second
+	  height: 500px
+	  width: 500px
+	  background: #fff
+	  left: calc(50% - 595px)
+	  top: 4%
+
+	  z-index: 3
+	&--third
+	  height: 400px
+	  width: 400px
+	  left: calc(50% - 840px)
+	  top: 16%
+
+	  z-index: 2
+
+	&--fourth
+	  left: 52%
+	  top: 14%
+	  background: #000
+	  height: 780px
+	  width: 600px
+
+	&--fivth
+	  left: 59%
+	  top: 17%
+	  background: #000
+	  height: 300px
+	  width: 300px
+
+.marketing-image-ruby
+  position: absolute
+  right: 0%
+  height: 90%
+  top: 70%
+  z-index: 7
+
+.form-bg-first
+  position: absolute
+  bottom: -2px
+  height: 243px
+  width: 100%
+  background-image: url(../../img/form/form-bg-first.png)
+  background-repeat: no-repeat
+  background-size: cover
+  z-index: 5
+
+
+.marketing-image-ruby-shadow
+  position: absolute
+  right: 0
+  bottom: -235px
+  z-index: 4
+  width: 100%
+  height: 108%
+
+.marketing-header
+  font-family: Roboto
+  color: #000
+  font-size: 56px
+  font-weight: bold
+  margin-top: -30px
+  width: 120%
+  //text-align: center
+  position: relative
+  z-index: 4
+
+.marketing-container-block
+  position: absolute
+  z-index: 4
+  width: 63%
+  height: 400px
+  top: 220px
+
+.marketing-rhombus-item
+  display: flex
+  &--white-first
+	  position: absolute
+	  right: 0
+  &--white-second
+	  position: absolute
+	  right: 90px
+	  top: 80px
+
+  &--white-third
+	  position: absolute
+	  right: 200px
+	  top: 160px
+
+  &--white-fourth
+	  position: absolute
+	  right: 300px
+	  top: 255px
+
+  &--white-fivth
+	  position: absolute
+	  right: 415px
+	  top: 360px
+
+
+
+.marketing-rhombus-item__icon
+  padding-left: 20px
+  height: 50px
+
+.marketing-rhombus-item__text
+  text-align: right
+  font-size: 18px
+  line-height: 1.5
+  font-family: Roboto
+
+.marketing-container-block--white
+	right: 85px
+	top: 255px
+	color: #fff
+	width: 100%
+	&--white-first
+		position: absolute
+		right: 0
+	&--white-second
+		  position: absolute
+		  right: 90px
+		  top: 80px
+
+	&--white-third
+		position: absolute
+		right: 200px
+		top: 160px
+
+	&--white-fourth
+		position: absolute
+		right: 300px
+		top: 255px
+
+	&--white-fivth
+		position: absolute
+		right: 400px
+		top: 360px
+//================================ MEDIA ==========================
+
+@media(max-width: 1680px)
+  .marketing-container-block
+  	top: 120px
+
+  .marketing-rhombus--fourth
+	  left: 52%
+	  top: 14%
+	  height: 704px
+	  width: 408px
+  .marketing
+	  height: 860px
+
+  .marketing-image-ruby
+  	top: 47%
+
+  .marketing-image-ruby-shadow
+  	bottom: -165px
+
+  .marketing-header
+  	font-size: 45px
+  	text-align: center
+  	width: 100%
+
+  .marketing-container-block--white
+  	right: 175px
+  	top: 202px
+
+
+  .marketing-rhombus-item__icon
+  	height: 40px
+
+@media(max-width: 1280px)
+  .marketing-rhombus
+	  height: 700px
+	  width: 700px
+
+  .marketing-image-ruby
+	  position: absolute
+	  right: 0
+	  height: 64%
+	  top: 59%
+	  z-index: 7
+
+  .form-bg-first
+	  height: 204px
+
+  .marketing-container-block
+	  width: 70%
+
+  .marketing-container-block--white
+	  width: 66%
+	  top: 283px
+	  right: 85px
+
+  .marketing-image-ruby-shadow
+	  bottom: 0
+	  height: 81%
+	  width: 90%
+
+  .footer-block
+	  right: 90px
+	  width: 60%
+	  top: 466px
+
+
+
+@media(max-width: 1024px)
+  .marketing
+	  height: 1030px
+
+  .marketing-container-block--black
+	  width: 65%
+	  top: 240px
+  .marketing-container-block--white
+	  width: 66%
+	  top: 283px
+	  right: 46px
+
+  .marketing-rhombus--first
+	  background: linear-gradient(-270deg,#fff 42%,#000 97%)
+	  top: 140px
+	  height: 700px
+	  width: 700px
+
+  .marketing-rhombus--second
+	  top: 200px
+
+  .marketing-rhombus--third
+	  height: 400px
+	  width: 400px
+	  right: 86px
+	  left: inherit
+	  top: 115px
+	  background: linear-gradient(-270deg,#fff 42%,#000 97%)
+	  z-index: 2
+
+  .marketing-rhombus--second
+	  background: transparent
+
+  .marketing-header
+	  margin-top: 15px
+
+
+@media(max-width: 998px)
+  .marketing-rhombus--first
+	  background: #000
+	  z-index: -1
+	  top: 370px
+	  left: 34%
+  .marketing-rhombus--second
+	  height: 700px
+	  width: 700px
+	  left: -16%
+
+  .marketing-rhombus--third
+	  display: none
+
+  .marketing
+	  height: 950px
+	  overflow: hidden
+  .marketing-rhombus-item--white
+	  text-align: right
+  .marketing-header
+	  transform: translate(0%)!important
+	  margin-top: 70px
+
+  .marketing-container-block
+	  position: static
+	  display: flex
+	  justify-content: flex-start
+	  flex-direction: column
+
+  .marketing-container-block--black
+	  width: 100%
+	  align-items: flex-start
+	  margin-left: 10%
+	  margin-top: 20px
+
+  .marketing-container-block--white
+	  width: 100%
+	  align-items: center
+	  margin-top: -95px
+	  margin-left: 20%
+
+
+  .marketing-rhombus-item
+	  position: static!important
+	  display: flex
+	  justify-content: space-between
+	  align-items: center
+	  margin: 10px 0
+	  width: 300px
+
+  //.marketing-rhombus
+	  display: none
+  .footer-block--form
+	  display: none
+  .form-bg-first
+	  display: none
+
+  .footer-image
+	  display: none
+
+  #hire
+	  width: initial
+	  left: 15px
+	  right: 15px
+
+  form input[type=submit]
+	  width: 100%
+
+  .marketing-rhombus-item__text
+	  text-align: left
+
+@media(max-width: 768px)
+
+
+  .marketing-header
+	  font-size: 35px
+
+  .marketing-rhombus
+	  transform: rotate(64deg)
+
+  .marketing-rhombus--first
+	  margin-top: 70px
+  .marketing-container-block--white
+	  margin-top: -20px
+
+  .marketing-container-block--black
+	  margin-top: 40px
+@media(max-width: 480px)
+  .marketing-rhombus-item
+	  margin: 10px auto
+  .marketing
+	  height: 865px
+  .marketing-rhombus--first
+	  left: 4%
+
+  .marketing-rhombus-item__text
+	  font-size: 17px
+	  line-height: 1.2
+
+
+  .marketing-rhombus-item
+	  text-align: right
+
+  .marketing-container-block--black
+	  margin-left: 0
+
+  .marketing-container-block--white
+	  margin-left: 0
+	  margin-top: -110px
+
+  .marketing-rhombus.marketing-rhombus--first
+	  margin-top: 105px
+	  transform: rotate(-87deg)
+
+  .marketing-rhombus
+	  transform: rotate(87deg)
+  .marketing-rhombus--second
+	  left: -58%
+
+  .marketing-rhombus-item
+	  width: 250px

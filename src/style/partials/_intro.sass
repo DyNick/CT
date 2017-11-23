@@ -1,0 +1,367 @@
+.intro
+    width: 100%
+    height: 1000px
+    display: flex
+    justify-content: center
+    position: relative
+    top: 0
+    left: 0
+    background-image: url(../../img/intro/crypta-bg-top.png)
+    background-repeat: no-repeat
+    background-size: cover
+    background-attachment: fixed
+    background-position: 48%
+
+
+@media(max-width: 1650px)
+    .intro
+        width: 100%
+        height: 800px
+
+.typewriter
+    position: absolute
+    top: 40%
+    left: 50%
+    transform: translate(-50%, -50%)
+    z-index: 1
+
+
+.typewriter h1
+    font-family: Roboto
+    color: #fed42d
+    overflow: hidden
+    font-size: 65px
+    font-weight: bold
+    border-right: .15em solid #fed42d
+    white-space: nowrap
+    margin: 0 auto
+    animation: typing 3.5s steps(30, end), blink-caret 0.5s step-end infinite
+
+
+
+.intro-header--sub
+    color: #fff
+    padding-left: 15px
+
+@keyframes typing
+    from
+        width: 0
+
+    to
+        width: 100%
+
+
+/* The typewriter cursor effect
+@keyframes blink-caret
+    from, to
+        border-color: transparent
+
+    50%
+        border-color: orange
+
+
+
+.intro-text
+    font-family: Roboto
+    text-align: center
+    color: #fff
+    overflow: hidden
+    font-size: 36px
+    padding-top: 20px
+    font-weight: bold
+    border-right: .15em solid transparent
+    white-space: nowrap
+    margin: 0 auto
+    animation: typing-second 3.5s steps(30, end), blink-caret-second 0.5s step-end infinite
+
+@keyframes typing-second
+    from
+        width: 0
+
+    to
+        width: 100%
+
+
+/* The typewriter cursor effect
+@keyframes blink-caret-second
+    from, to
+        border-color: transparent
+
+    50%
+        border-color: transparent
+
+
+.rhombus
+    width: 700px
+    height: 700px
+    margin-top: -20px
+    transform: rotate(45deg)
+    position: absolute
+    display: flex
+    align-items: center
+    justify-content: center
+    border: 2px solid #fed42d
+    transition: all .2s ease-in-out
+    &--tv
+        left: 0px
+    &--education
+        right: 0px
+
+
+
+.rhombus:hover
+    transform: scale(1.2)
+    transition: all .2s ease-in-out
+    background: linear-gradient(135deg, transparent 40%,orange 97%)
+    z-index: 2
+    .rhombus-description
+        opacity: 1
+
+        &__inner
+            &--text
+                opacity: 1
+                z-index: 2
+            &--text-small
+                opacity: 1
+                z-index: 2
+
+
+
+.rhombus--tv:hover
+    background: linear-gradient(-135deg,transparent 40%,orange 97%)
+    .rhombus-description
+        transform: translate(-82%,67%) rotate(45deg)
+.fa--rhombus
+    display: block
+    margin: 10px 0
+.rhombus-description
+    font-family: Roboto
+    transform: translate(12%,67%) rotate(-45deg)
+    bottom: 40px
+    margin-left: 42%
+    font-size: 40px
+    color: #fff
+    text-align: center
+    margin-top: 390px
+    font-weight: bold
+    opacity: 0.7
+    &__inner
+        &--text
+            display: block
+            opacity: 0.7
+        &--text-small
+            font-size: 16px
+            text-transform: uppercase
+            font-weight: normal
+            opacity: 0.7
+
+.hidden
+    display: none
+    opacity: 0.7
+
+//=============================== MEDIA===================
+@media(max-width: 1650px)
+    .rhombus-description
+        margin-left: 19%
+        margin-top: 190px
+
+
+    .rhombus
+        width: 500px
+        height: 500px
+        margin-top: 165px
+
+    .rhombus--tv
+        left: 130px
+
+    .rhombus--education
+        right: 130px
+
+    .typewriter h1
+        font-size: 50px
+
+
+    .rhombus--tv:hover
+        background: linear-gradient(-135deg,transparent 40%,orange 97%)
+        .rhombus-description
+            transform: translate(-33%,67%) rotate(45deg)
+
+@media(max-width: 1280px)
+
+
+
+    .rhombus-description
+        margin-top: 140px
+
+
+    .header .header-nav
+        width: 70%
+
+
+    .typewriter
+        top: 40%
+
+    .rhombus
+        width: 400px
+        height: 400px
+        margin-top: 165px
+
+    .rhombus--tv
+        margin-left: 2%
+
+    .rhombus--education
+        margin-right: 2%
+
+    .rhombus-description__inner--text
+        font-size: 30px
+
+    .fa--rhombus
+        font-size: 30px
+        display: inline-block
+
+    .rhombus-description__inner--text-small
+        font-size: 13px
+        line-height: 1.2
+
+
+@media(max-width: 1024px)
+    .rhombus--tv
+        margin-left: 0%
+
+    .rhombus--education
+        margin-right: 0%
+
+
+    .intro
+        width: 100%
+        height: 100vh
+    .rhombus
+        width: 335px
+        height: 65px
+        margin-top: inherit
+        bottom: 180px
+        transform: rotate(0deg)
+        display: flex!important
+        align-items: center
+        justify-content: space-around
+        flex-direction: row-reverse
+        border: 1px solid #d8b00f
+        background-color: #d8b00f
+
+    .rhombus-description
+        transform: inherit
+        margin: 0
+        opacity: 1
+
+    .rhombus-description__inner--text-small
+        display: none
+
+    .rhombus-description__inner--text
+        font-size: 25px
+        display: inline-block
+        padding-right: 25px
+        font-weight: normal
+        opacity: 1
+
+
+    .promotion-first-bg
+        height: 190px
+
+    .marketing-image-ruby-shadow
+        display: none
+
+    .marketing-image-ruby
+        display: none
+
+@media(max-width: 998px)
+    .rhombus:hover
+        transform: scale(1)
+
+
+    .intro
+        height: 700px
+
+    .typewriter
+        text-align: center
+        width: 100%
+        left: 0px
+        top: 25%
+        transform: translate(0%,0%)
+    .typewriter h1
+        white-space: normal
+        font-size: 45px
+        border-right: none
+        animation: inherit
+
+    .intro-text
+        white-space: normal
+        font-size: 23px
+        animation: inherit
+
+    .header .header-nav
+        width: 80%
+
+    .rhombus
+        width: 40%
+
+    .rhombus--tv
+       left: 7%
+
+    .rhombus--education
+        right: 7%
+
+@media(max-width: 768px)
+
+
+
+    .typewriter
+        text-align: center
+        width: 100%
+        left: 0px
+        top: 35%
+        transform: translate(0%,0%)
+    .typewriter h1
+        white-space: normal
+        font-size: 35px
+        border-right: none
+        animation: inherit
+
+    .intro-text
+        white-space: normal
+        font-size: 23px
+        animation: inherit
+
+    .rhombus
+        height: 50px
+        width: 350px
+        margin: 0 auto
+        left: 5%
+        right: 5%
+
+    .rhombus--education
+        bottom: 95px
+
+    .promotion-first-bg
+        display: none
+
+
+    .rhombus--tv:hover
+        background: linear-gradient(-135deg,transparent 40%,orange 97%)
+        .rhombus-description
+            transform: translate(0%,0%) rotate(0deg)
+
+@media(max-width: 480px)
+    .intro
+        height: 575px
+    .typewriter
+        top: 18%
+    .rhombus
+        width: 96%
+        left: 2%
+        right: 2%
+
+@media(max-height: 600px)
+    .rhombus
+        margin-top: 80px
+
+

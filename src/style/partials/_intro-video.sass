@@ -1,0 +1,68 @@
+.intro_video
+  width: 100%
+  height: 100vh
+  margin-top: 102px
+  @media (max-width: 1024px)
+    height: auto
+  .intro_video__video
+    width: 100%
+    background-color: #000
+    height: 92vh
+    position: relative
+    @media (max-width: 1024px)
+     height: 450px
+    @media (max-width: 480px)
+      height: 320px
+    .intro_video__video_button
+      position: absolute
+      width: 100%
+      height: 100%
+      display: flex
+      justify-content: center
+      align-items: center
+  .intro_video__video_info  
+    display: flex
+    justify-content: space-around
+    align-items: center
+    flex-wrap: wrap
+    height: 8vh
+    @media (max-width: 1024px)
+      height: 5vh
+    @media (max-width: 480px)
+      flex-wrap: nowrap
+      justify-content: space-around
+      flex-direction: column
+      height: 5vh
+    @media (max-width: 480px)
+      height: 10vh
+    p
+      font-family: $main-font
+      font-size: 30px
+      text-transform: uppercase
+      @media (max-width: 1024px)
+        font-size: 18px
+      @media (max-width: 480px)
+        font-size: 14px
+      @media (max-width: 320px)
+        font-size: 13px
+    &__info
+      color: #000000
+    &__date
+      color: #8c8c8c
+    &__looks
+      color: #8c8c8c
+      display: flex
+      justify-content: center
+      align-items: center
+      @media (max-width: 480px)
+        display: none
+      img
+        margin: 0 5px 5px 0
+        
+
+
+
+
+    
+
+

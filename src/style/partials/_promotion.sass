@@ -1,0 +1,184 @@
+section
+
+.promotion
+  background-image: url(../../img/promotion/promotion-second-bg.png)
+  background-repeat: no-repeat
+  background-size: cover
+  background-position: 48%
+  height: 850px
+  width: 100%
+  position: relative
+  z-index: 2
+  font-family: Roboto
+
+.container--promotion
+  position: relative
+  height: 100%
+
+.promotion-head
+  width: 100%
+  color: #f8e700
+  position: absolute
+  top: 50px
+  text-align: center
+  font-size: 56px
+  font-weight: bold
+
+.promotion-sub-head
+  width: 100%
+  color: #fff
+  position: absolute
+  top: 110px
+  font-size: 35px
+  text-align: center
+  span
+    font-size: 25px
+
+
+.promotion-content
+  position: absolute
+  width: 70%
+  top: 200px
+  left: 50%
+  transform: translateX(-47%)
+  display: flex
+  align-items: center
+  justify-content: space-between
+
+.fa--promotion
+  color: #fff
+  font-size: 40px
+  margin-bottom: 10px
+  margin-right: 10px
+
+
+.column-item__block
+
+  h3
+    font-family: Roboto
+    font-weight: normal
+    font-size: 30px
+    color: #f6de44
+    text-transform: uppercase
+
+  div
+    color: #fff
+    font-family: Roboto
+    font-weight: normal
+    padding-top: 10px
+    text-transform: uppercase
+
+
+
+
+.promotion-content__column
+  width: 50%
+
+.column-item
+  display: flex
+  align-items: start
+  justify-content: left
+  margin-bottom: 35px
+  height: 110px
+
+.promotion-first-bg
+  position: absolute
+  bottom: -1px
+  height: 243px
+  width: 100%
+  background-image: url(../../img/intro/promotion-first-bg.png)
+  background-repeat: no-repeat
+  background-size: cover
+  z-index: 1
+
+//===================================== MEDIA ========================================//
+@media(max-width: 1650px)
+  .promotion
+    height: 630px
+
+  .promotion-sub-head
+    font-size: 23px
+  .promotion-sub-head
+    top: 70px
+
+  .promotion-head
+    font-size: 45px
+    top: 15px
+  .promotion-content
+    top: 150px
+
+  .promotion-content
+    transform: translateX(-40%)
+
+
+  .column-item__block h3
+    font-size: 23px
+
+  .column-item__block div
+    font-size: 15px
+
+  .fa--promotion
+    font-size: 30px
+
+  .column-item
+    height: 85px
+
+@media(max-width: 1280px)
+  .promotion
+      height: 750px
+
+  .promotion-first-bg
+      height: 170px
+  .promotion-content
+      transform: translateX(0%)
+      margin: 45px auto 0
+      position: static
+
+  .promotion-content__column
+      margin-top: 140px
+
+
+@media(max-width: 768px)
+  .column-item__block h3
+      font-size: 20px
+  .promotion-head
+      font-size: 35px
+
+  .promotion-content
+      width: 100%
+
+  .container--promotion
+    height: auto
+
+
+@media(max-width: 480px)
+  .container--promotion
+      transform: translate(0%)!important
+
+  .promotion-head
+      position: static
+      padding-bottom: 50px
+      padding-top: 50px
+
+  .promotion-sub-head
+      top: 145px
+
+
+  .column-item
+      height: auto
+  //.column-item__block
+      text-align: center
+
+  .promotion-content__column
+      margin-top: 0
+
+  .promotion
+      height: 985px
+
+  .promotion-content
+      flex-wrap: wrap
+      justify-content: center
+
+
+  .promotion-content__column
+      width: 100%

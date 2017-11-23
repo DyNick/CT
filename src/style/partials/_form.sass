@@ -1,0 +1,389 @@
+
+.form
+  background-image: url(../../img/form/form-bg-second.png)
+  background-repeat: no-repeat
+  background-size: cover
+  width: 100%
+  height: 900px
+  position: relative
+  z-index: 6
+
+//=====================FORM STYLE===============
+.container
+  margin: 0 auto
+.form-container
+  width: 400px
+  margin: 0 auto
+  box-shadow: 0px 0px 10px #000
+  margin-top: 20px
+  padding: 20px
+  color: #E3DFDF
+  background: rgba(0,0,0,0.1)
+
+h2
+  text-align: center
+
+label
+  display: block
+  margin: 10px 0
+label.error
+  color: #D51C1C
+  margin-top: -6px
+
+input
+  height: 35px
+  width: 100%
+  outline: none
+  border: 1px solid #fff
+  background-color: #fff
+  color: #777
+  font-size: 14px
+  padding-left: 10px
+  box-sizing: border-box
+  cursor: pointer
+  margin-bottom: 20px
+input:focus
+  box-shadow: 0 0 6px #fff
+input.error
+  border: 1px solid #D51C1C
+input:focus.error
+  box-shadow: 0 0 6px #D51C1C
+
+.submit
+  display: block
+  width: 50%
+  margin: 20px auto 0 auto
+  height: 40px
+  background-color: #fff
+  color: #555755
+  font-weight: bold
+  padding-left: 0
+.submit:hover
+  border-color: #555755
+  background-color: #555755
+  color: #fff
+
+
+input[type="checkbox"]
+  visibility: hidden
+input[type=checkbox]:checked ~ .checkbox-switch:after
+  opacity: 1
+
+.checkbox
+  width: 20px
+  height: 20px
+  background-color: transparent
+  cursor: pointer
+  position: relative
+  border: 1px solid #fff
+.checkbox input
+  height: 23px
+  margin-bottom: 0
+  margin-left: 0px
+  margin-top: -2px
+  box-sizing: border-box
+.checkbox input:hover
+  cursor: pointer
+#agree-error
+  position: absolute
+  top: 6px
+  left: 30px
+  min-width: 300px
+
+
+.checkbox-switch:after
+  content: ''
+  display: block
+  position: absolute
+  height: 5px
+  width: 10px
+  border-top: 2px solid #fff
+  border-right: 2px solid #fff
+  top: 4px
+  left: 4px
+  transform: rotate(132deg)
+  opacity: 0
+  //width: 20px
+  //height: 20px
+  //display: block
+  //position: absolute
+  //top: 0
+  //left: 0
+  //margin: 0
+  //cursor: pointer
+
+.accept
+  margin-bottom: 10px
+
+
+//=====================================
+#hire
+  //background: white
+  //margin: 60px auto 120px
+  //border-top: 15px solid #313a3d
+  text-align: center
+  padding: 50px 0 110px
+  //float: left
+  width: 50%
+  position: absolute
+  z-index: 1
+  h1
+    margin-bottom: 40px
+    font-size: 45px
+    text-transform: uppercase
+    font-family: 'Lato', sans-serif
+    font-weight: 100
+    text-align: left
+
+
+form
+  width: 100%
+
+  .field
+    width: 100%
+    position: relative
+    margin-bottom: 15px
+    label
+      text-transform: uppercase
+      position: absolute
+      top: -10px
+      left: 0
+      color: #339966
+      background: #003333
+      width: 100%
+      padding: 19px 0
+      font-size: 1em
+      letter-spacing: 0.075em
+      -webkit-transition: all 333ms ease-in-out
+      -moz-transition: all 333ms ease-in-out
+      -o-transition: all 333ms ease-in-out
+      -ms-transition: all 333ms ease-in-out
+      transition: all 333ms ease-in-out
+      + span
+        font-family: 'Lato'
+        opacity: 0
+        color: white
+        display: block
+        position: absolute
+        top: 12px
+        left: 7%
+        font-size: 2.5em
+        text-shadow: 1px 2px 0 #cd6302
+        -webkit-transition: all 333ms ease-in-out
+        -moz-transition: all 333ms ease-in-out
+        -o-transition: all 333ms ease-in-out
+        -ms-transition: all 333ms ease-in-out
+        transition: all 333ms ease-in-out
+    input[type="text"], textarea
+      border: none
+      background: #e8e9ea
+      width: 100%
+      margin: 0
+      height: 52px
+      padding: 18px 0
+      padding-left: 19.5%
+      color: #313a3d
+      font-size: 1em
+      letter-spacing: 0.05em
+      text-transform: uppercase
+    input[type="text"]#msg, textarea#msg
+      height: 18px
+      resize: none
+      -webkit-transition: all 333ms ease-in-out
+      -moz-transition: all 333ms ease-in-out
+      -o-transition: all 333ms ease-in-out
+      -ms-transition: all 333ms ease-in-out
+      transition: all 333ms ease-in-out
+    input[type="text"]:focus, textarea:focus, input[type="text"].focused, textarea.focused
+      outline: none
+    input[type="text"]:focus#msg, textarea:focus#msg, input[type="text"].focused#msg, textarea.focused#msg
+      padding-bottom: 150px
+    input[type="text"]:focus + label, textarea:focus + label, input[type="text"].focused + label, textarea.focused + label
+      width: 18%
+      background: #FCBF29
+      color: #fff
+    input[type="text"].focused + label, textarea.focused + label
+      color: #396
+    &:hover label
+      width: 18%
+      background: #313a3d
+      color: white
+  input[type="submit"]
+    background: #FCBF29
+    color: white
+    -webkit-appearance: none
+    border: none
+    height: 60px
+    float: left
+    width: 50%
+    text-transform: uppercase
+    position: relative
+    padding: 13px 50px
+    font-size: 1em
+    letter-spacing: 0.1em
+    font-family: 'Lato', sans-serif
+    font-weight: 300
+    -webkit-transition: all 333ms ease-in-out
+    -moz-transition: all 333ms ease-in-out
+    -o-transition: all 333ms ease-in-out
+    -ms-transition: all 333ms ease-in-out
+    transition: all 333ms ease-in-out
+    &:hover
+      background: #033
+      color: #FCBF29
+    &:focus
+      outline: none
+      background: #FCBF29
+      color: #396
+
+.footer-block
+  position: absolute
+  right: 0
+  width: 50%
+  top: 500px
+  color: #fff
+  z-index: 1
+  
+.footer-column__body
+  & a
+    color: #fff
+    margin: 0 30px
+    font-size: 18px
+
+
+.footer-block__inner
+  display: flex
+  align-items: center
+  justify-content: space-between
+  margin-bottom: 0px
+  width: 100%
+  position: relative
+
+  &--top-contact:after
+    content: ''
+    display: block
+    position: absolute
+    width: 100%
+    border-bottom: 2px solid #2f9179
+
+
+.footer-block__inner-column
+  display: flex
+  flex-direction: column
+  align-items: center
+  justify-content: space-between
+  height: 83px
+
+.footer-column__head
+  font-size: 27px
+
+.aboutus-link
+  position: relative
+
+  &--instagram:after
+    content: '\f111'
+    font-family: FontAwesome
+    font-style: normal
+    font-weight: normal
+    text-decoration: inherit
+    color: #fff
+    font-size: 9px
+    position: absolute
+    top: 8px
+    left: -18px
+
+  &--instagram:before
+    content: '\f111'
+    font-family: FontAwesome
+    font-style: normal
+    font-weight: normal
+    text-decoration: inherit
+    color: #fff
+    font-size: 9px
+    position: absolute
+    top: 8px
+    right: -18px
+
+
+  &--advertasing:after
+    content: '\f111'
+    font-family: FontAwesome
+    font-style: normal
+    font-weight: normal
+    text-decoration: inherit
+    color: #fff
+    font-size: 9px
+    position: absolute
+    top: 8px
+    left: -18px
+
+  &--advertasing:before
+    content: '\f111'
+    font-family: FontAwesome
+    font-style: normal
+    font-weight: normal
+    text-decoration: inherit
+    color: #fff
+    font-size: 9px
+    position: absolute
+    top: 8px
+    right: -18px
+
+.fa--footer
+  height: 60px
+  width: 60px
+  text-align: center
+  line-height: 60px
+  background: rgba(255,255,255,0.2)
+  border-radius: 50%
+  font-size: 30px
+  margin-bottom: 20px
+  margin-top: 20px
+
+
+
+
+.footer-column__body a:first-child
+  margin: 0
+
+.footer-column__body a:last-child
+  margin: 0
+
+.footer-image.footer-image--main
+      height: 900px
+      width: 120%
+@media(max-width: 768px)
+  .footer-block__inner
+      flex-wrap: wrap
+      width: 100%
+      justify-content: center
+      flex-direction: column
+
+  .footer-block__inner--top-contact:after
+      display: none
+
+  .footer-block__inner-column
+      height: 65px
+      margin-bottom: 50px
+
+
+.error-massage
+    display: none
+    text-align: left
+    background-color: red
+    color: #fff
+    line-height: 30px
+    height: 30px
+    box-sizing: border-box
+    padding-left: 20px
+    width: 100%
+    margin-bottom: 10px
+    text-transform: uppercase
+
+.error-massage.active
+    display: block
+
+
+@media(max-width: 480px)
+  form .field label
+    font-size: 0.9em

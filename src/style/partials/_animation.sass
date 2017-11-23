@@ -1,0 +1,143 @@
+.animatable
+  /* initially hide animatable objects
+  visibility: hidden
+  /* initially pause animatable objects their animations
+  animation-play-state: paused
+
+/* show objects being animated
+
+.animated
+  visibility: visible
+
+  animation-fill-mode: both
+  animation-duration: 1s
+  animation-play-state: running
+  &.animationDelay
+    animation-delay: .4s
+  &.animationDelayMed
+    animation-delay: 1.2s
+  &.animationDelayLong
+    animation-delay: 1.6s
+  &.fadeBgColor
+    animation-name: fadeBgColor
+  &.bounceIn
+    animation-name: bounceIn
+  &.bounceInRight
+    animation-name: bounceInRight
+  &.bounceInLeft
+    animation-name: bounceInLeft
+  &.fadeIn
+    animation-name: fadeIn
+  &.fadeInDown
+    animation-name: fadeInDown
+  &.fadeInUp
+    animation-name: fadeInUp
+  &.moveUp
+    animation-name: moveUp
+
+/* CSS Animations (extracted from http://glifo.uiparade.com/)
+
+
+@keyframes fadeInDown
+  0%
+    opacity: 0
+    transform: translateY(- 20 px)
+
+  100%
+    opacity: 1
+    transform: translateY(0)
+
+
+
+@keyframes fadeIn
+  0%
+    opacity: 0
+
+  60%
+    opacity: 0
+
+  20%
+    opacity: 0
+
+  100%
+    opacity: 1
+
+
+
+
+@keyframes bounceInLeft
+  0%
+    opacity: 0
+    transform: translateX(- 2000px)
+
+  60%
+    transform: translateX(20px)
+
+  80%
+    transform: translateX(- 5 px)
+
+  100%
+    opacity: 1
+    transform: translateX(0)
+
+
+@keyframes bounceInRight
+  0%
+    opacity: 0
+    transform: translateX(2000px)
+
+  60%
+    transform: translateX(- 20px)
+
+  80%
+    transform: translateX(5px)
+
+  100%
+    opacity: 1
+    transform: translateX(0)
+
+
+@keyframes fadeInUp
+  0%
+    opacity: 0
+    transform: translateY(20px)
+
+  100%
+    opacity: 1
+    transform: translateY(0)
+
+
+@keyframes bounceIn
+  0%
+    opacity: 0
+    transform: scale(0.3)
+
+  50%
+    transform: scale(1.05)
+
+  70%
+    transform: scale(0.9)
+
+  100%
+    opacity: 1
+    transform: scale(1)
+
+
+@keyframes moveUp
+  0%
+    opacity: 1
+    transform: translateY(40px)
+
+  100%
+    opacity: 1
+    transform: translateY(0)
+
+@keyframes fadeBgColor
+  0%
+    background: none
+
+  70%
+    background: none
+
+  100%
+    background: #464646
