@@ -1,0 +1,66 @@
+.intro_slider
+  height: 407px
+  overflow: hidden
+  position: absolute
+  top: 80px
+  right: 70px             
+  .video_slider
+    li
+      display: block
+      position: relative
+      margin: 0
+      padding: 0
+      transition: .25s
+      &:hover
+        transition: .25s
+        .overlay
+          transition: .25s
+          background-color: rgba(0,0,0,.1)
+          .play_img
+            transition: .25s
+            transform: scale(1.2)
+      .overlay
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        background: rgba(0,0,0,.5)
+        display: flex
+        justify-content: center
+        align-items: center
+        cursor: pointer
+        transition: .25s
+        .play_img
+          width: 36px
+          height: 36px
+          cursor: pointer
+          transition: .25s
+      a
+        img
+          width: 245px
+          height: 133px
+.intro_slider__nav
+  position: absolute
+  top: 50%
+  right: 22%
+  z-index: 999
+  li
+    .prev
+      position: absolute
+      bottom: -310px
+      width: 0
+      height: 0
+      border-left: 25px solid transparent
+      border-right: 25px solid transparent
+      border-top: 50px solid #fff
+      cursor: pointer
+    .next
+      position: absolute
+      top: -359px
+      width: 0
+      height: 0
+      border-left: 25px solid transparent
+      border-right: 25px solid transparent
+      border-bottom: 50px solid #000   
+      cursor: pointer

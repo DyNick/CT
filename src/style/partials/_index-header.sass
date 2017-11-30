@@ -1,0 +1,91 @@
+.index-header
+  background-color: #fac800
+  width: 100%
+  border-bottom: 1px solid $main-color
+  padding: 30px 0
+  position: relative
+  z-index: 999
+  .index-nav
+    position: relative
+    .line
+      position: absolute
+      width: 100%
+      height: 4px
+      background: #000
+      bottom: -41px
+      left: 2.1%
+      &:after
+        content: ''
+        position: absolute
+        width: 100%
+        height: 4px
+        transform: translateX(28%)
+        background: #000
+    input.search
+      width: 270px
+      height: 40px
+      opacity: 0
+      border: none
+      font-size: 14px
+      position: absolute
+      right: 30px
+      bottom: -45px
+      color: #000
+      border-radius: 5px
+      background-image: url('../img/icons-header/search-input.png')
+      background-repeat: no-repeat
+      background-position: 95%
+      transition: .25s
+    .active-search
+      opacity: 1 !important
+      transition: .25s !important
+    ul
+      display: flex
+      justify-content: space-around
+      align-items: center
+      text-transform: uppercase
+      flex-wrap: wrap
+      li
+        a
+          color: #000
+          font-family: $main-font
+          transition: .25s
+          font-size: 18px
+          position: relative
+          display: block
+          transition: .25s
+          &:hover 
+            color: #fff
+            .line
+              width: 100%
+              background-color: #fff
+          .line
+            position: absolute
+            width: 0
+            height: 2px
+            bottom: -5px
+            left: 0
+            background-color: #fff
+            transition: .3s
+          .index-logo
+            padding: 0 125px 0 125px
+        .index-search
+          margin: 0 0 0 100px
+          &__icon
+            width: 24px
+            height: 24px
+            background-image: url('../img/icons-header/search-swipe1.png')
+            background-repeat: no-repeat
+            transition: .25s
+
+.index-search__icon-close
+  width: 24px
+  height: 24px
+  background-image: url('../img/icons-header/search-swipe1.png')
+  background-repeat: no-repeat
+  background-position: 0 -24px
+  transition: .25s
+
+
+
+

@@ -1,0 +1,131 @@
+.index-event
+  width: 100%
+  height: 660px
+  background: linear-gradient(to right, #efc72a 50%, #fff 50%)
+  position: relative
+  &__title
+    position: absolute
+    left: 50%
+    transform: translateX(-87%)
+    font-size: 180px
+    font-weight: bold
+    color: rgba(255,255,255,.3)
+    top: -15px
+  &:before
+    content: ''
+    width: 600px
+    height: 107px
+    position: absolute
+    top: -76px
+    left: 50%
+    transform: translateX(-83%)
+
+    //background: repeating-linear-gradient(-45deg,#000 19px,transparent 26px)
+    background: repeating-linear-gradient(-45deg,transparent,transparent 6px,rgba(0,0,0,1) 8px,rgba(0,0,0,1) 8px)
+    //z-index: -1
+.event-carousel.block-carousel.owl-loaded
+  display: flex
+
+
+.index-block-main--event
+  margin-top: 30px
+  height: 600px
+.index-event-block
+  width: 80%
+  position: absolute
+  right: 0
+  padding: 65px
+  z-index: 1
+.event-carousel
+
+  width: 100%
+  .owl-nav.disabled
+    display: block
+    position: absolute
+    bottom: -20px
+    //left: -60px
+    .owl-prev
+      position: absolute
+      border: none
+      &:before
+        content: "\f177"
+        font-family: FontAwesome
+        color: #000
+        font-size: 33px
+        padding-right: 0.5em
+        position: absolute
+        top: 10px
+        right: -3px
+
+
+    .owl-next
+      position: absolute
+      border: none
+      &:before
+        content: "\f178"
+        font-family: FontAwesome
+        color: #000
+        font-size: 33px
+        padding-right: 0.5em
+        position: absolute
+        top: 10px
+        left: 5px
+  .owl-dots
+    display: inline-block
+    margin-top: 20px
+    position: absolute
+    bottom: -70px
+    transform: rotate(90deg)
+    //&:after
+      content: ''
+
+  .owl-dot
+    background: #fff
+    height: 5px
+    margin: 10px 0
+    width: 5px
+    border: 2px solid transparent
+    border-radius: 50%
+  .owl-dot.active
+    background: transparent
+    height: 10px
+    margin: 10px 0 10px -2px
+    width: 10px
+    border: 2px solid #000
+    
+.block-carousel_item
+  &__title
+    color: #fff
+  &__body
+    color: #fff
+
+.block-carousel_item-content-block
+  display: flex
+  flex-direction: row
+  align-items: flex-start
+  justify-content: center
+.block-carousel_item__title
+  padding: 10px
+.block-carousel_item__body
+  box-sizing: border-box
+  padding: 10px
+.block-carousel_item__date
+  background-color: #fff
+  font-size: 67px
+  box-sizing: border-box
+.date-day
+  border-bottom: 3px solid #000
+
+.btn--event
+  left: 50%
+  transform: translateX(-35%)
+  bottom: -10px
+.dots-line
+  height: 2px
+  width: 20%
+  position: absolute
+  left: 30px
+  bottom: 20px
+  background: linear-gradient(to right, #000 50%, #fff 50%)
+  display: block
+  

@@ -1,0 +1,29 @@
+include index-intro_slider
+mixin index-intro()
+  section.index-intro
+    div.index-intro__wrap
+      div.container.index-intro__content
+        div.index-intro__line_gradient
+        h2.index-intro__content__title broadcast
+        div.index-brodcast__title
+          div.index-brodcast__title__wrap
+            div.line
+            div.text broadcast
+        div.index-intro__main
+          div.line-slider1
+          div.line-slider2
+          div.link_all_video
+            a(href="#") посмотреть все видео
+              div.link_line
+          div.video_wrap
+            iframe(src="https://www.youtube.com/embed/8B4GcjD_jig?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allowfullscreen)
+          //- SLIDER VERTICAL VIDEO !!! 
+          +index-intro_slider()
+          //- SLIDER VERTICAL VIDEO : END !!!
+          div.text_about__video Интервью c Jan Keil (Ян Кейл) в рамках Ukrainian Blockchain Day
+
+                
+
+    
+
+  

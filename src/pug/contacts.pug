@@ -9,13 +9,13 @@ include template/footer
 include template/footer-main
 include template/header-main
 include template/contact-main
-include template/contact-map
+
 
 
 doctype html
 html(lang="ru")
 	head
-		title= 'GLOBALWEB creative web-studio'
+		title= 'Contacts'
 		//- meta
 		meta(charset="UTF-8")
 		meta(name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0")
@@ -33,8 +33,12 @@ html(lang="ru")
 		//FAVICON:END
 	body.page
 		div.contact-container
-			+contact-main()
-			+contact-map()
+			+nav()
+			div.contact-container__inner
+
+				+header-main()
+				+contact-main()
+
 		//- libs
 		script(src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js", integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa", crossorigin="anonymous")
 		script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js")
@@ -43,3 +47,5 @@ html(lang="ru")
 
 		//- custom scripts
 		script(src="js/main.js")
+		script(src="js/map.js")
+		script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB0cn25mI9XiBZWoJjDm3QlpwlfcnDXYfQ&callback=myMap&language=en&region=UA")

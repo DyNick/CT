@@ -5,19 +5,19 @@ mixin form
 			div#hire
 				h1 Callback
 				div.error-massage  Enter valid email
-				form#form(action='', method='post', novalidate='novalidate')
+				form#form(action='', method='post')
 					.field.name-box
-						input#name(type='text', placeholder='Who Are You?' , required='')
+						input#name(type='text' placeholder='Who Are You?'  required)
 						label(for='name') Name
 						//span.ss-icon check
 
 					.field.phone-box
-						input#phone(type='text', placeholder='PHONE NUMBER', )
+						input#phone(type='text' placeholder='PHONE NUMBER' required)
 						label(for='email') PHONE
 						//span.ss-icon check
 
 					.field.email-box
-						input#email(type='text', placeholder='name@email.com' , required='')
+						input#email(type='text' placeholder='name@email.com'  required)
 						label(for='email') Email
 						//span.ss-icon check
 
@@ -29,7 +29,7 @@ mixin form
 						div.footer-column__head SOCIAL
 						div.footer-column__body
 							a.aboutus-link(href='https://www.facebook.com/crypta.tv/' target=_blank) Facebook
-							a.aboutus-link.aboutus-link--instagram(href='#') Instagram
+							a.aboutus-link.aboutus-link--instagram(href='#')
 							a.aboutus-link(href='https://www.youtube.com/c/CryptaTV' target=_blank) YouTube
 
 					div.footer-block__inner-column

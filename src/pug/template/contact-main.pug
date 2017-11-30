@@ -1,36 +1,29 @@
 mixin contact-main
 	section.section-contact__body
-		.contact-info
-			.contact-info__block
-				h3.contact-header CONTACT DETAILS
-				.contact-table-cell
-					i.fa.fa-phone.fa-fw(aria-hidden='true')
-					|  Phone: + 38 (044) 360-16-96
-				.contact-table-cell
-					i.fa.fa-envelope.fa-fw(aria-hidden='true')
-					|  Email:
-					a(href='mailto:info@terrapoint.com.ua') info@terrapoint.com.ua
-				.contact-table-cell
-					i.fa.fa-skype.fa-fw(aria-hidden='true')
-					|  Skype: terrapoint.web
-				.contact-table-cell
-					i.fa.fa-facebook(aria-hidden='true')
-					| Viber: + 38 (096) 753-28-79
-			.contact-info__block
-				h3.contact-header CONTACT ADRESS
-				.contact-table-cell Ukraine
-				.contact-table-cell Kyiv, 03134
-				.contact-table-cell Kiyanivskiy lane 7a
-				.contact-table-cell View on map
-		.soc-info
-			a(href='https://www.facebook.com/TerrapointAgency', target='_blank')
-				i.fa.fa-facebook(aria-hidden='true')
-			| /
-			a(href='https://www.instagram.com/terrapoint.web.agency/', target='_blank')
-				i.fa.fa-instagram(aria-hidden='true')
-			| /
-			a(href='https://twitter.com/terrapointcomua', target='_blank')
-				i.fa.fa-twitter(aria-hidden='true')
-			| /
-			a(href='https://plus.google.com/u/0/100319334320072161049', target='_blank')
-				i.fa.fa-google-plus(aria-hidden='true')
+		h1.header-contact Contact Us
+		.contact-block
+			.contact-info
+				.contact-info__block
+					h3.contact-header CONTACT DETAILS
+					.contact-table-cell
+						i.fa.fa-phone.fa-fw(aria-hidden='true')
+						|  Phone: + 38 (044) 360-16-96
+					.contact-table-cell
+						i.fa.fa-envelope.fa-fw(aria-hidden='true')
+						|  Email:
+						a.contact-table-cell__link(href='mailto:cryptatv@gmail.com') cryptatv@gmail.com
+					.contact-table-cell
+						//a.contact-table-cell__link(href='https://www.facebook.com/crypta.tv/', target='_blank')
+							i.fa.fa-facebook(aria-hidden='true')
+
+						//a.contact-table-cell__link(href='https://www.youtube.com/c/CryptaTV', target='_blank')
+							i.fa.fa-youtube-play(aria-hidden='true')
+				.contact-info__block
+					h3.contact-header CONTACT ADRESS
+					.contact-table-cell Ukraine
+					.contact-table-cell Kyiv, 03134
+					.contact-table-cell Kiyanivskiy lane 7a
+					//.contact-table-cell View on map
+
+
+		#googleMap.section-contact__map.map-block

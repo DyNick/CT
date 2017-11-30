@@ -1,0 +1,161 @@
+.clearfix
+  &:after
+    content: ''
+    display: block
+    clear: both
+    visibility: hidden
+
+
+.index-news
+  width: 100%
+  margin-bottom: 50px
+  border-top: 30px solid #000
+.news-carousel
+  .owl-dots
+    display: inline-block
+    margin-top: 20px
+
+  .owl-dot
+    background: #fff
+    height: 5px
+    margin: 10px 0
+    width: 5px
+    border: 2px solid transparent
+    border-radius: 50%
+  .owl-dot.active
+    background: transparent
+    height: 10px
+    margin: 10px 0 10px -2px
+    width: 10px
+    border: 2px solid #efc72a
+.index-block-main--news
+  margin-top: -10%
+.index-block-main
+  width: 80%
+  background-color: #000
+  color: #fff
+  float: left
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+  align-items: center
+  padding: 20px 65px 20px 65px
+  box-sizing: border-box
+.index-block-sub-title
+  font-size: 110px
+  font-weight: bold
+  width: 100%
+  text-align: left
+  padding-bottom: 20px
+  border-bottom: 1px solid #efc72a
+  margin-bottom: 20px
+  position: relative
+  color: #9c9c9c
+  &:before
+    content: ''
+    position: absolute
+    height: 12px
+    width: 100%
+    top: 35px
+    background-color: #000
+.block-carousel
+  display: flex
+  justify-content: space-between
+  align-items: center
+
+
+.index-block-title
+  width: 20%
+  float: left
+  &__text
+    text-align: center
+    color: #000
+    margin-top: 190px
+    font-size: 30px
+    transform: rotate(90deg)
+    padding-right: 30px
+    box-sizing: border-box
+
+    &:after
+
+      content: ''
+      display: block
+      display: block
+      height: 2px
+      width: 45px
+      background-color: #000
+      float: right
+      margin-top: 13px
+.news-carousel__item
+  padding: 0 10px
+  box-sizing: border-box
+  &__title
+    font-size: 23px
+    margin-bottom: 20px
+    & span
+      color: #efc72a
+      padding-right: 10px
+
+  &__sub-title
+    font-size: 15px
+    margin-bottom: 15px
+    line-height: 19px
+
+  &__body
+    font-size: 15px
+    margin-bottom: 15px
+    opacity: 0.7
+
+  &__footer
+    display: flex
+    justify-content: space-between
+
+.btn
+  height: 50px
+  width: 230px
+  line-height: 50px
+  text-align: center
+  border: 1px solid #efc72a
+  color: #fff
+  text-transform: uppercase
+  margin-top: 30px
+  position: absolute
+  bottom: 35px
+
+
+.box
+  overflow: hidden
+  height: 79px
+  line-height: 19px
+  &:before
+    content: ""
+    float: left
+    width: 5px
+    height: 90px
+  > *:first-child
+    float: right
+    width: 100%
+    margin-left: -5px
+  &:after
+    content: "\02026"
+    box-sizing: content-box
+    float: right
+    position: relative
+    top: -25px
+    left: 50%
+    width: 3em
+    margin-left: -3em
+    padding-right: 5px
+    text-align: right
+    background-size: 100% 100%
+
+
+.item__footer__watch
+  & i
+    color: #efc72a
+    padding-right: 5px
+
+
+
+
+

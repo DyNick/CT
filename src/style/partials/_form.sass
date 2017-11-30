@@ -208,6 +208,10 @@ form
       width: 18%
       background: #313a3d
       color: white
+    &:focus label
+      width: 18%
+      background: #313a3d
+      color: white
   input[type="submit"]
     background: #FCBF29
     color: white
@@ -235,6 +239,14 @@ form
       outline: none
       background: #FCBF29
       color: #396
+
+input
+  &:required + label
+    width: 18%
+
+input
+  &:invalid + label
+    width: 100%
 
 .footer-block
   position: absolute
@@ -290,9 +302,9 @@ form
     font-size: 9px
     position: absolute
     top: 8px
-    left: -18px
+    left: 0px
 
-  &--instagram:before
+  //&--instagram:before
     content: '\f111'
     font-family: FontAwesome
     font-style: normal

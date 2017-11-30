@@ -47,62 +47,6 @@ $(document).ready(function() {
 /*=========================FORM==============================*/
 $(document).ready(function() {
 
-    var emailInput;
-    var phoneInput;
-
-    $("#email").on("change", function() {
-        phoneInput = $(this).val();
-
-        if (validateEmail(emailInput)) {
-            $(this).css({
-                color: "white",
-                background: "green",
-                border: "2px solid green"
-            });
-        } else {
-            $(this).css({
-                color: "red",
-                border: "2px solid red"
-            });
-
-            // alert("not a valid email address");
-        }
-    });
-
-    // $("#phone").on("change", function() {
-    //     phoneInput = $(this).val();
-    //
-    //     if (validateEmail(emailInput)) {
-    //         $(this).css({
-    //             color: "white",
-    //             background: "green",
-    //             border: "2px solid green"
-    //         });
-    //     } else {
-    //         $(this).css({
-    //             color: "red",
-    //             border: "2px solid red"
-    //         });
-    //
-    //     }
-    // });
-
-
-    $("#subscribe-button").on("click", function(e) {
-        // e.preventDefault();
-        if (validateEmail(emailInput)) {
-            $('.section-successful-popup').css('display','block')
-        } else {
-            $('.error-massage').addClass('active');
-            return false;
-        }
-    });
-
-    function validateEmail(email) {
-        var pattern = /^([\w-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$/;
-
-        return $.trim(email).match(pattern) ? true : false;
-    }
 
 
 // jQuery Mask Plugin v1.14.10
@@ -124,18 +68,102 @@ $(document).ready(function() {
         a.applyDataMask=function(b){b=b||a.jMaskGlobals.maskElements;(b instanceof a?b:a(b)).filter(a.jMaskGlobals.dataMaskAttr).each(c)};g={maskElements:"input,td,span,div",dataMaskAttr:"*[data-mask]",dataMask:!0,watchInterval:300,watchInputs:!0,useInput:!/Chrome\/[2-4][0-9]|SamsungBrowser/.test(window.navigator.userAgent)&&g("input"),watchDataMask:!1,byPassKeys:[9,16,17,18,36,37,38,39,40,91],translation:{0:{pattern:/\d/},9:{pattern:/\d/,optional:!0},"#":{pattern:/\d/,recursive:!0},A:{pattern:/[a-zA-Z0-9]/},
             S:{pattern:/[a-zA-Z]/}}};a.jMaskGlobals=a.jMaskGlobals||{};g=a.jMaskGlobals=a.extend(!0,{},g,a.jMaskGlobals);g.dataMask&&a.applyDataMask();setInterval(function(){a.jMaskGlobals.watchDataMask&&a.applyDataMask()},g.watchInterval)},window.jQuery,window.Zepto);
 
-    $('#phone').mask('+00(000)000-00-00', {placeholder: "+38(___)___-__-__"});
+
+
+
+
+
+
+    var emailInput;
+    var nameInput;
+   // var phoneInput;
+
+    $("#email").on("change", function() {
+        emailInput = $(this).val();
+
+        if (validateEmail(emailInput)) {
+            $(this).css({
+                border: "1px solid green"
+            });
+        } else {
+            $(this).css({
+                border: "1px solid red"
+            });
+
+            // alert("not a valid email address");
+        }
+    });
+    //$('#phone').mask('+00(000)000-00-00', {placeholder: "+38(___)___-__-__"});
+   $("#phone").mask('+00(000)000-00-00', {placeholder: "+38(___)___-__-__"}, function() {
+        phoneInput = $(this).val();
+
+        if (validatePhone(phoneInput)) {
+            $(this).css({
+                border: "1px solid green"
+            });
+        } else {
+            $(this).css({
+                border: "1px solid red"
+            });
+
+        }
+    });
+    $("#name").on("change", function() {
+        nameInput = $(this).val();
+
+        if (validateName(nameInput)) {
+            $(this).css({
+                border: "1px solid green"
+            });
+        } else {
+            $(this).css({
+                border: "1px solid red"
+            });
+
+            // alert("not a valid email address");
+        }
+    });
+
+    $("#subscribe-button").on("click", function(e) {
+        // e.preventDefault();
+        if (validateEmail(emailInput)  && validateName(nameInput) ) {
+            $('.error-massage').css ('display','none');
+            $('.section-successful-popup').css('display','block')
+
+        } else {
+            $('.error-massage').css ('display','block');
+            return false;
+        }
+    });
+
+    function validateEmail(email) {
+        var pattern = /^([\w-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$/;
+
+        return $.trim(email).match(pattern) ? true : false;
+    }
+    function validateName(name) {
+        var namepattern = /^[a-zA-Zа-яА-Я ]{2,30}$/;
+        return $.trim(name).match(namepattern) ? true : false;
+    }
+ /*  function validatePhone(phone) {
+        var phonepattern = /\(?([0-9]{3})\)?([ .-]?)([0-9]{3})\2([0-9]{4})/;
+        return $.trim(phone).match(phonepattern) ? true : false;
+    }*/
+    function validatePhone() {
+        if( phoneInput==true){
+            return true
+        }
+       else{
+            return false
+        }
+    }
+
+
 
 
 });
 /*
 
-function validatePhone(phone) {
-    var patternPhone =  $('#phone').mask('+00(000)000-00-00', {placeholder: "+38(___)___-__-__"});
-
-    return $.trim(phone).match(patternPhone) ? true : false;
-}
-*/
 
 
 /*==============PARALLAX ===================*/
@@ -305,3 +333,149 @@ jQuery(function($) {
     $(window).trigger('scroll');
 
 });*/
+/*==========================INDEX-NEWS============*/
+
+$(document).ready(function($) {
+    "use strict";
+    $('.block-carousel').owlCarousel( {
+        loop: true,
+        center: true,
+        items: 3,
+        dots:true,
+        nav: false,
+        //navText: ['<i class="fa fa-angle-left"></i>','<i class="fa fa-angle-right"></i>'],
+        responsive: {
+            0: {
+                items: 1
+            },
+            768: {
+                items: 2
+            },
+            1170: {
+                items: 3
+            }
+        }
+    });
+});
+
+
+
+// FOR INDEX PAGE
+$(document).ready( function () {
+    $('.index-search').on( 'click', function () {
+        $('.search').toggleClass('active-search');
+        $('.index-search__icon').toggleClass('index-search__icon-close');
+    });
+})
+
+$(function() {
+    var slider = $('.video_slider'),
+        sliderContent = slider.html(),                      // Содержимое слайдера
+        slideHeight = $('.video_slider > li').outerHeight(),         // высота слайдера
+        slideCount = $('.video_slider > li').length,               // Количество слайдов
+        prev = $('.intro_slider__nav .prev'),                      // Кнопка "назад"
+        next = $('.intro_slider__nav .next'),                      // Кнопка "вперед"
+        sliderInterval = 100000,                              // Интервал смены слайдов
+        animateTime = 300,                                 // Время смены слайдов
+        course = 1,                                         // Направление движения слайдера (1 или -1)
+        margin = - slideHeight;                              // Первоначальное смещение слайдов
+    $('.slider li:last').clone().prependTo('.video_slider'); // Копия последнего слайда помещается в начало.
+    $('.slider img').eq(1).clone().appendTo('.video_slider'); // Копия первого слайда помещается в конец.
+    $('.video_slider').css('margin-top', -slideHeight);         // Контейнер .slider сдвигается вверх на высоту одного слайда.
+    function nextSlide(){                                 // Запускается функция animation(), выполняющая смену слайдов.
+        interval = window.setInterval(animate, sliderInterval);
+    }
+
+    function animate(){
+        if (margin==-slideCount*slideHeight-slideHeight){     // Если слайдер дошел до конца
+            slider.css({'marginTop':-slideHeight});           // то блок .slider возвращается в начальное положение
+            margin=-slideHeight*2;
+        }else if(margin==0 && course==-1){                  // Если слайдер находится в начале и нажата кнопка "назад"
+            slider.css({'marginTop':-slideHeight*slideCount});// то блок .slider перемещается в конечное положение
+            margin=-slideHeight*slideCount+slideHeight;
+        }else{                                              // Если условия выше не сработали,
+            margin = margin - slideHeight*(course);              // значение margin устанавливается для показа следующего слайда
+        }
+        slider.animate({'marginTop':margin},animateTime);  // Блок .slider смещается влево на 1 слайд.
+    }
+
+    function sliderStop(){                                // Функция преостанавливающая работу слайдера
+        window.clearInterval(interval);
+    }
+
+    prev.click(function() {                               // Нажата кнопка "назад"
+        if (slider.is(':animated')) { return false; }       // Если не происходит анимация
+        var course2 = course;                               // Временная переменная для хранения значения course
+        course = -1;                                        // Устанавливается направление слайдера справа налево
+        animate();                                          // Вызов функции animate()
+        course = course2 ;                                  // Переменная course принимает первоначальное значение
+    });
+
+    next.click(function() {                               // Нажата кнопка "назад"
+        if (slider.is(':animated')) { return false; }       // Если не происходит анимация
+        var course2 = course;                               // Временная переменная для хранения значения course
+        course = 1;                                         // Устанавливается направление слайдера справа налево
+        animate();                                          // Вызов функции animate()
+        course = course2 ;                                  // Переменная course принимает первоначальное значение
+    });
+
+    slider.add(next).add(prev).hover(function() {         // Если курсор мыши в пределах слайдера
+        sliderStop();                                       // Вызывается функция sliderStop() для приостановки работы слайдера
+    }, nextSlide);                                        // Когда курсор уходит со слайдера, анимация возобновляется.
+
+    nextSlide();                                          // Вызов функции nextSlide()
+});
+
+
+$(document).ready(function(){
+    var $arrLinks = [
+        'https://www.youtube.com/embed/KujY3tPaa14?rel=0&amp;controls=1&amp;showinfo=0;autoplay=1',
+        'https://www.youtube.com/embed/Rdp6obrzfcI?rel=0&amp;controls=1&amp;showinfo=0;autoplay=1',
+        'https://www.youtube.com/embed/3Si2ytdbzuk?rel=0&amp;controls=1&amp;showinfo=0;autoplay=1',
+        'https://www.youtube.com/embed/kOEbD_8Qiks?rel=0&amp;controls=1&amp;showinfo=0;autoplay=1',
+        'https://www.youtube.com/embed/vHl5tX32A-w?rel=0&amp;controls=1&amp;showinfo=0;autoplay=1',
+        'https://www.youtube.com/embed/0_6IlA_E1dQ?rel=0&amp;controls=1&amp;showinfo=0;autoplay=1',
+        'https://www.youtube.com/embed/X2kEChifetA?rel=0&amp;controls=1&amp;showinfo=0;autoplay=1',
+        'https://www.youtube.com/embed/8qpRIdY5b28?rel=0&amp;controls=1&amp;showinfo=0;autoplay=1',
+        'https://www.youtube.com/embed/huv8vql4pOA?rel=0&amp;controls=1&amp;showinfo=0;autoplay=1',
+        'https://www.youtube.com/embed/qPlXxaQtbe0?rel=0&amp;controls=1&amp;showinfo=0;autoplay=1',
+        'https://www.youtube.com/embed/8B4GcjD_jig?rel=0&amp;controls=1&amp;showinfo=0;autoplay=1'
+    ]; // Массив ссылок для iframe
+    var $videoText = [
+        'План B: обзор ICO. Интервью c Ярославом Мудрым',
+        'Выпуск второй. "План В" Интервью с Андреем Великим',
+        'Интервью на Ukrainian Blockchain Day с Евгением Нетребовым',
+        'Новое интервью на Ukrainian Blockchain Day с со-организатором ивента Максимом Онегиным',
+        'Проект от Дмитрия Окрамчука на Ukrainian Blockchain Day',
+        'Интервью с Vince Meens (Винсом Меенсом) на Ukrainian Blockchain Day.',
+        'Интервью с Jason Inch (Джейсон Инчь) на Ukrainian Blockchain Day.',
+        'Интервью с Mihail Lukan (Михаил Лукань) на Ukrainian Blockchain Day.',
+        'Интервью с Денисом Борисовым на Ukrainian Blockchain Day.',
+        'Интервью с Itay Malinski (Итаем Малинским) на Ukrainian Blockchain Day.',
+        'Интервью c Jan Keil (Ян Кейл) в рамках Ukrainian Blockchain Day'
+    ];
+    var $buttons = $('.video_slider > li > .overlay');
+    var $aboutVideoText = $('.text_about__video');
+    for ( var i = 0; i < $buttons.length; i++) {
+        $($buttons[i]).on('click',function() {
+            var $indexBtn = $($buttons).index(this);
+            $aboutVideoText.text($videoText[$indexBtn]);
+            $('.video_wrap > iframe').attr('src', $arrLinks[$indexBtn]);
+        });
+    }
+});
+
+//  SLIDER for COURSE SECTION
+$(document).ready( function() {
+    $('.slider_course__wrap').owlCarousel({
+        stagePadding: 200,
+        // center:true,
+        loop:true,
+        dots: true,
+        margin: -20,
+        nav:true,
+        items:1,
+        // lazyLoad: true
+    })
+
+});

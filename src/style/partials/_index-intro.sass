@@ -1,0 +1,160 @@
+@keyframes scroll_line
+    0%
+        bottom: 65px
+        height: 0px
+    25%
+        bottom: 15px
+        height: 50px
+    75%
+        bottom: 15px
+        height: 0px
+    100%
+        bottom: 65px
+@keyframes scroll_line2
+    0%
+        top: 65px
+        height: 0px
+    25%
+        top: 15px
+        height: 50px
+    75%
+        top: 15px
+        height: 0px
+    100%
+        top: 65px
+.index-intro
+  width: 100%
+  position: relative
+  overflow: hidden
+  padding-bottom: 110px   
+  &__line_gradient
+    width: 369px
+    height: 450px
+    position: absolute
+    background: #999
+    background: repeating-linear-gradient(-45deg, transparent, transparent 10px, #000 10px,#000 20px)
+    bottom: -182px
+    left: -32%
+    z-index: 1
+  &__wrap
+    width: 100%
+    background-image: url('../img/index/intro/bg_index_intro.png')
+    background-repeat: no-repeat
+    background-position-x: 19%
+    position: relative
+    bottom: 80px
+    padding: 120px 0 0 0
+    z-index: 1
+    .index-intro__content
+      position: relative
+      &__title
+        position: absolute
+        width: 100%
+        font-size: 207px
+        text-transform: uppercase
+        letter-spacing: 3px
+        left: 5px
+        font-family: $title-font
+        color: rgba(255,255,255,.4)
+      .index-brodcast__title
+        width: 235px
+        height: 452px
+        position: absolute
+        top: 309px
+        left: -15px
+        background: repeating-linear-gradient(-45deg, transparent, transparent 10px, rgba(255,255,255,.3) 10px, rgba(255,255,255,.3) 20px)
+        display: flex
+        justify-content: center
+        align-items: center
+        &__wrap
+          transform: rotate(-90deg)
+          display: flex
+          justify-content: center
+          align-items: center
+          margin: 0 100px 50px 0
+          position: relative
+          .line
+            width: 60px
+            height: 1px
+            background-image: linear-gradient(to right, #fff 50%, #000 50%)
+          .text
+            font-family: $main-font
+            font-size: 36px
+      .index-intro__main
+        width: 970px
+        height: 620px
+        background-color: #000
+        position: relative
+        top: 90px
+        right: -206px
+        .line-slider1
+          position: absolute
+          bottom: 5px
+          right: 188px
+          margin-bottom: 40px 
+          width: 1px
+          height: 0
+          background-color: #fff
+          z-index: 8
+          animation: scroll_line 2s ease-in-out
+          animation-iteration-count: infinite
+        .line-slider2
+          position: absolute
+          top: 0
+          right: 188px
+          margin-top: -7px
+          width: 1px
+          height: 0
+          background-color: #fff
+          z-index: 8
+          animation: scroll_line2 2s ease-in-out
+          animation-iteration-count: infinite
+        .link_all_video
+          position: absolute
+          padding: 35px 0 25px 70px
+          z-index: 2s
+          a
+            font-size: 25px
+            color: #fff
+            font-family: $main-font
+            position: relative
+            transition: .25s
+            &:hover
+              transition: .25s
+              color: $sec-color
+              .link_line
+                width: 100%
+                background-color: $sec-color
+            .link_line
+              position: absolute
+              bottom: -6px
+              width: 30%
+              height: 2px 
+              background-color: #fff
+              transition: .25s
+        .video_wrap
+          width: 720px
+          height: 407px
+          position: absolute
+          top: 80px
+          left: -65px
+          iframe
+            width: 100%
+            height: 100%
+        .text_about__video
+          position: absolute
+          width: 60%
+          bottom: 0
+          left: 0
+          color: #fff
+          font-size: 24px
+          font-family: $main-font
+          padding: 0 0 40px 70px
+
+
+
+
+
+
+
+

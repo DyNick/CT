@@ -33,7 +33,7 @@ var path = {
         html: 'src/**/*.html',
         js: 'src/js/**/*.js',
         style: 'src/style/**/*.sass',
-        img: 'src/img/**/*.*',
+        img: 'src/img/**/**/*.*',
         fonts: 'src/fonts/**/*.*',
         pug: 'src/pug/**/*.pug'
     },
@@ -43,7 +43,7 @@ var config = {
     server: {
         baseDir: "./build"
     },
-    tunnel: true,
+   // tunnel: true,
     host: 'localhost',
     port: 3000,
     logPrefix: "GULP"
